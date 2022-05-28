@@ -1,11 +1,12 @@
 const dataList = ['body', 'params', 'query'];
-const errorList = []
+
 
 const validation = (schema)=>
 {
     return (req, res, next)=>
     {
 
+        const errorList = []
         dataList.forEach( key => 
         {
             if(schema[key])
